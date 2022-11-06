@@ -15,6 +15,7 @@
 		7F0350AE291624390023D965 /* AQIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0350AD291624390023D965 /* AQIHandler.swift */; };
 		7F0350D029169FF10023D965 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0350CF29169FF10023D965 /* SceneDelegate.swift */; };
 		7F0350D2291786A90023D965 /* AQIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0350D1291786A90023D965 /* AQIData.swift */; };
+		7F0350D42917E9D80023D965 /* AQIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0350D32917E9D80023D965 /* AQIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7F0350AD291624390023D965 /* AQIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIHandler.swift; sourceTree = "<group>"; };
 		7F0350CF29169FF10023D965 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7F0350D1291786A90023D965 /* AQIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIData.swift; sourceTree = "<group>"; };
+		7F0350D32917E9D80023D965 /* AQIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				7F0350AD291624390023D965 /* AQIHandler.swift */,
 				7F0350D1291786A90023D965 /* AQIData.swift */,
+				7F0350D32917E9D80023D965 /* AQIModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				7F0350AE291624390023D965 /* AQIHandler.swift in Sources */,
 				7F0350D029169FF10023D965 /* SceneDelegate.swift in Sources */,
 				7F0350D2291786A90023D965 /* AQIData.swift in Sources */,
+				7F0350D42917E9D80023D965 /* AQIModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

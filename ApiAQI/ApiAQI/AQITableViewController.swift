@@ -7,15 +7,26 @@
 
 import UIKit
 
-class AQITableViewController: UITableViewController {
+class AQITableViewController: UITableViewController , AQIHandlerDelegate{
 
-   var aqiHandler = AQIHandler()
+   
+    var models:[AQIModel]?
+    var aqiHandler = AQIHandler()
     override func viewDidLoad() {
         super.viewDidLoad()
+        aqiHandler.delegate = self
         
         aqiHandler.fetchData()
          
  
+    }
+    
+    func didUpdateAQIData(AQIModels: [AQIModel]) {
+        models = AQIModels
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
     }
 
     // MARK: - Table view data source
@@ -27,14 +38,17 @@ class AQITableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return resultData?.records?.count ?? 0
+        return models?.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        cell.textLabel?.text = resultData?.records?[indexPath.row].sitename ?? ""
+        if let cellModels = models{
+            cell.textLabel?.text = cellModels[indexPath.row].SiteName
+            cell.detailTextLabel?.text = cellModels[indexPath.row].AQI
+        }
 
         return cell
     }
